@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- title -->
+    <title> Music | Coding NInja Music channel</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/basic-images/favicon.ico">
+    <!-- (index.html) css file  -->
+    <link rel="stylesheet" href="./styles/index-style.css">
+    <!-- font-awesome link for icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+</head>
+<!-- Important -->
+    <!-- ways to  Trigger popup boxes
+        - on playlist section vertical dots.
+        - on trending section each song horizontal dots.
+     -->
+
+     <!-- ways to Trigger Play bar (index.html) 
+        - Playlist section tap on play icon.
+        - (on Desktop) Trending section hover on song image play icon appear and click.
+        - (on Mobile) Trending section click on song image .
+
+        - (popular hindi and english section) click on song image.
+
+        *NOTE: In case you are testing for reponsiveness in desktop in order to see play bar
+         you need to scroll to bottom (specially in firefox). However, everything works fine if you are testing
+         on real devices and not on inspect mode.
+    -->
+
+    <!-- click on any artist to visit artist page -->
+
+    <!-- Different carousel approch for mobile devices. -->
+    
+<body>
+
+    <!-- Header  section-->
+
+    <header>
+        <div class="container flex space-between">
+
+            <!-- Brand related stuff -->
+
+            <div class="brand">
+                <div class="brand-icon large-icon">
+                    <i class="fas fa-headphones"></i>
+                </div>
+                <div class="brand-name">
+                    <a href="#">
+                        <h1>MUSIC</h1>
+                    </a>
+                </div>
+            </div>
+
+            <!-- desktop search bar -->
+
+            <div class="desktop-search-container">
+                <div class="search flex space-evenly">
+                    <div>
+                        <i class="fas fa-search small-icon green pointer"></i>
+                    </div>
+
+                    <div>
+                        <input type="text" placeholder='Search songs, artists, albums'>
+                    </div>
+
+                    <div>
+                        <i class="fas fa-microphone small-icon green pointer"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- menu icon  for Mobile devices-->
+
+            <div class="menu-icon large-icon">
+                <!-- clicking on it trigger menu section -->
+                <a href="#menu-show">
+                    <i class="fas fa-bars green"></i>
+                </a>
+            </div>
+
+            <!-- user related features -->
+
+            <div class="user flex">
+
+                <div>
+                    <i class="fas fa-globe-americas small-icon green  pointer"></i>
+                </div>
+
+                <div class="notification">
+                    <div class='red-dot'></div>
+                    <i class="fas fa-bell small-icon green pointer"></i>
+                </div>
+
+                <div class='user-img  pointer'>
+                    <img src="./images/basic-images/user.avif" alt="user-image">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Search bar for mobile device -->
+
+        <div class="mobile-search-container flex center">
+
+            <div class="search flex space-evenly">
+                <div>
+                    <i class="fas fa-search small-icon green pointer"></i>
+                </div>
+
+                <div>
+                    <input type="text" placeholder='Search songs, artists, albums, more'>
+                </div>
+
+                <div>
+                    <i class="fas fa-microphone small-icon green pointer"></i>
+                </div>
+            </div>
+
+        </div>
+
+    </header>
+    <!-- Header section ends -->
+
+    <!-- menu icon  for Mobile devices-->
+
+    <div class="mobile-menu " id="menu-show">
+
+        <div class="close">
+            <a href="#">
+                <i class="fas fa-times large-icon black"></i>
+            </a>
+        </div>
+
+        <div class="option">
+            <div>
+                <i class="fas fa-user-alt small-icon green"></i>
+            </div>
+            <div>
+                <h3>My Account</h3>
+            </div>
+        </div>
+
+        <div class="option">
+            <div>
+                <i class="fas fa-bell small-icon green"></i>
+            </div>
+            <div>
+                <h3>Notifications</h3>
+            </div>
+        </div>
+
+        <div class="option">
+            <div>
+                <i class="fas fa-globe-americas small-icon green"></i>
+            </div>
+            <div>
+                <h3>Languages</h3>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- carousel section -->
+
+    <section class="carousel-container">
+
+        <div class="carousel flex space-between">
+
+            <div class="banner  pointer">
+                <img src="./images/carousel/banner-1.webp" alt="banner">
+            </div>
+
+            <div class="banner  pointer">
+                <img src="./images/carousel/banner-3.webp" alt="banner">
+            </div>
+        </div>
+
+        <div class="center-banner banner  pointer">
+            <img src="./images/carousel/banner-2.webp" alt="banner">
+        </div>
+
+    </section>
+
+    <!-- mobile carousel only for mobile devices -->
+    <section class="mobile-carousel flex center">
+
+        <div class="mob-car-holder">
+            <!-- Image will change with animation -->
+        </div>
+
+    </section>
+
+
+    <!-- Playlist section -->
+
+    <section class="playlist-container" id="playlist">
+        <!-- title -->
+        <div class="playlist-head flex space-between ">
+            <div class='flex'>
+                <h2>My Playlist</h2>
+                <i class="fas fa-compact-disc large-icon cd black"></i>
+            </div>
+
+            <div>
+                <a href="#playlist-pop">
+                    <i class="fas fa-ellipsis-v small-icon dark"></i>
+                </a>
+            </div>
+
+             <!-- play list popup -->
+             <!-- positioned relative to playlist -head mentioned in (index-style.css) -->
+
+            <div class="popup" id="playlist-pop">
+                <!-- closin it redirect to playlist section -->
+                <div class="close">
+                    <a href="#playlist">
+                        <i class="fas fa-times small-icon black"></i>
+                    </a>
+                </div>
+                <div class="option">
+                    <div>
+                        <i class="fas fa-play small-icon green"></i>
+                    </div>
+                    <div>
+                        <h3>Play All</h3>
+                    </div>
+                </div>
+                <div class="option">
+                    <div>
+                        <i class="fas fa-filter small-icon green"></i>
+                    </div>
+                    <div>
+                        <h3>Filter</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+       
+        <!-- songs  -->
+
+        <div class="playlist">
+
+            <div class="songs-list ">
+
+                <!-- container to manage song details and featres -->
+
+                <div class="song-container flex space-between scaled">
+                    <!-- song details like img,name, author -->
+                    <div class="song flex">
+
+                        <div class="song-img">
+                            <img src="./images/playlist/img-1.jpg" alt="song-image">
+                        </div>
+
+                        <div class="song-details">
+                            <div class="song-name">
+                                <h3>Faded</h3>
+                            </div>
+
+                            <div class="song-author">
+                                <h4>Alan Walker</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- song features like play, like -->
+                    <div class="song-feature flex">
+                        <div>
+                            <a href="#playbar-pop">
+                                <i class="fas fa-play small-icon black scaled"></i>
+                            </a>
+                        </div>
+
+                        <div>
+                            <i class="far fa-heart small-icon red like scaled"></i>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="song-container flex space-between scaled">
+                    <!-- song details like img,name, author -->
+                    <div class="song flex">
+                        <div class="song-img">
+                            <img src="./images/playlist/img-2.jpg" alt="song-image">
+                        </div>
+
+                        <div class="song-details">
+                            <div class="song-name">
+                                <h3>On my way</h3>
+                            </div>
+                            <div class="song-author">
+                                <h4>Alan Walker</h4>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- song features like play, like -->
+                    <div class="song-feature flex">
+                        <div>
+                            <a href="#playbar-pop">
+                                <i class="fas fa-play small-icon black scaled"></i>
+                            </a>
+                        </div>
+
+                        <div>
+                            <i class="fas fa-heart small-icon red like scaled"></i>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="song-container flex space-between scaled">
+                    <!-- song details like img,name, author -->
+                    <div class="song flex">
+
+                        <div class="song-img">
+                            <img src="./images/playlist/img-3.webp" alt="song-image">
+                        </div>
+
+                        <div class="song-details">
+                            <div class="song-name">
+                                <h3>Cheap Thrills</h3>
+                            </div>
+
+                            <div class="song-author">
+                                <h4>Sia</h4>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- song features like play, like -->
+                    <div class="song-feature flex">
+                        <div>
+                            <a href="#playbar-pop">
+                                <i class="fas fa-play small-icon black scaled"></i>
+                            </a>
+                        </div>
+
+                        <div>
+                            <i class="fas fa-heart small-icon red like scaled"></i>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="song-container flex space-between scaled">
+                    <!-- song details like img,name, author -->
+                    <div class="song flex">
+                        <div class="song-img">
+                            <img src="./images/playlist/img-4.jpg" alt="song-image">
+                        </div>
+                        <div class="song-details">
+                            <div class="song-name">
+                                <h3>Closer</h3>
+                            </div>
+                            <div class="song-author">
+                                <h4>Chainsmoker</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- song features like play, like -->
+                    <div class="song-feature flex">
+                        <div>
+                            <a href="#playbar-pop">
+                                <i class="fas fa-play small-icon black scaled"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <i class="far fa-heart small-icon red like scaled"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="song-container flex space-between scaled">
+                    <!-- song details like img,name, author -->
+                    <div class="song flex">
+                        <div class="song-img">
+                            <img src="./images/playlist/img-1.jpg" alt="song-image">
+                        </div>
+                        <div class="song-details">
+                            <div class="song-name">
+                                <h3>Faded</h3>
+                            </div>
+                            <div class="song-author">
+                                <h4>Alan Walker</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- song features like play, like -->
+                    <div class="song-feature flex">
+                        <div>
+                            <a href="#playbar-pop">
+                                <i class="fas fa-play small-icon black scaled"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <i class="fas fa-heart small-icon red like scaled"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="song-container flex space-between scaled">
+                    <!-- song details like img,name, author -->
+                    <div class="song flex">
+                        <div class="song-img">
+                            <img src="./images/playlist/img-2.jpg" alt="song-image">
+                        </div>
+                        <div class="song-details">
+                            <div class="song-name">
+                                <h3>On my way</h3>
+                            </div>
+                            <div class="song-author">
+                                <h4>Alan Walker</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- song features like play, like -->
+                    <div class="song-feature flex">
+                        <div>
+                            <a href="#playbar-pop">
+                                <i class="fas fa-play small-icon black scaled"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <i class="far fa-heart small-icon red like scaled "></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="song-container flex space-between scaled">
+                    <!-- song details like img,name, author -->
+                    <div class="song flex">
+                        <div class="song-img">
+                            <img src="./images/playlist/img-3.webp" alt="song-image">
+                        </div>
+                        <div class="song-details">
+                            <div class="song-name">
+                                <h3>Cheap Thrills</h3>
+                            </div>
+                            <div class="song-author">
+                                <h4>Sia</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- song features like play, like -->
+                    <div class="song-feature flex">
+                        <div>
+                            <a href="#playbar-pop">
+                                <i class="fas fa-play small-icon black scaled"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <i class="far fa-heart small-icon red like scaled"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="song-container flex space-between scaled">
+                    <!-- song details like img,name, author -->
+                    <div class="song flex">
+                        <div class="song-img">
+                            <img src="./images/playlist/img-4.jpg" alt="song-image">
+                        </div>
+                        <div class="song-details">
+                            <div class="song-name">
+                                <h3>Closer</h3>
+                            </div>
+                            <div class="song-author">
+                                <h4>The Chainsmokers</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- song features like play, like -->
+                    <div class="song-feature flex">
+                        <div>
+                            <a href="#playbar-pop">
+                                <i class="fas fa-play small-icon black scaled"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <i class="far fa-heart small-icon red like scaled"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Trending section -->
+    <!-- id given so closing song features icon will redirect to this section again -->
+    <section class="trending-container " id="trending">
+        <!-- trending head properties same as playlist head -->
+        <div class="playlist-head flex space-between ">
+            <div class="flex">
+                <h2>Trendings</h2>
+                <!-- sparkle  image -->
+                <img class="sparkle" src="./images/basic-images/sparkle.png" alt="sparkle">
+            </div>
+            <div>
+                <a href="#">
+                    <i class="fas fa-ellipsis-v small-icon dark "></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- trendin songs properties same as playlist song containers and songs
+            some media queries for responsivness
+        -->
+
+        <div class="songs-section flex wrap">
+
+            <div class="song-container trending-song-container flex space-between scaled ">
+
+                <!-- song details like img,name, author -->
+                <div class="song trending-song flex">
+                    <div class="song-img">
+                        <a href="#playbar-pop">
+                            <img src="./images/playlist/img-6.jpg" alt="song-image">
+                        </a>
+                        <div class="hover-play-box flex center">
+                            <a href="#playbar-pop">
+                                <i class="fas fa-play small-icon hover-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="song-details">
+                        <div class="song-name">
+                            <h3>Blinding Lights</h3>
+                        </div>
+                        <div class="song-author">
+                            <h4>weekend</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- pop-up for song featyres triggered by horizontal dots icon -->
+
+                <div class="song-pop-up" id="trend-song-pop-1">
+                    <a href="#trending">
+                        <i class="fas fa-times small-icon scaled black"></i>
+                    </a>
+                    <div class="flex">
+                        <i class="fas fa-download small-icon scaled right green"></i>
+                        <h4>Download</h4>
+                    </div>
+                    <div class="flex">
+                        <i class="fas fa-plus small-icon scaled right green"></i>
+                        <h4>Add to Playlist</h4>
+                    </div>
+                </div>
+
+                <!-- song features like play, like -->
+                <div class="song-feature flex flex-col center ">
+                    <div>
+                        <a href="#trend-song-pop-1">
+                            <i class="fas fa-ellipsis-h  small-icon green scaled"></i>
+                        </a>
+                    </div>
+                    <div>
+                        <h5>3:39</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="song-container trending-song-container flex space-between scaled">
+                <!-- song details like img,name, author -->
+                <div class="song trending-song  flex">
+                    <div class="song-img">
+                        <a href="#playbar-pop">
+                            <img src="./images/playlist/img-7.jpg" alt="song-image">
+                        </a>
+                        <div class="hover-play-box flex center">
+                            <a href="#playbar-pop">
+                                <i class="fas fa-play small-icon hover-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="song-details">
+                        <div class="song-name">
+                            <h3>ily</h3>
+                        </div>
+                        <div class="song-author">
+                            <h4>Surf musa</h4>
+                        </div>
+                    </div>
+
+
+                    <!-- pop-up for song featyres triggered by horizontal dots icon -->
+
+                    <div class="song-pop-up" id="trend-song-pop-2">
+                        <a href="#trending">
+                            <i class="fas fa-times small-icon scaled black"></i>
+                        </a>
+                        <div class="flex">
+                            <i class="fas fa-download small-icon scaled right green"></i>
+                            <h4>Download</h4>
+                        </div>
+                        <div class="flex">
+                            <i class="fas fa-plus small-icon scaled right green"></i>
+                            <h4>Add to Playlist</h4>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- song features like play, like -->
+                <div class="song-feature ">
+                    <div>
+                        <a href="#trend-song-pop-2">
+                            <i class="fas fa-ellipsis-h small-icon green scaled"></i>
+                        </a>
+                    </div>
+                    <div>
+                        <h5>4:30</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="songs-section flex wrap">
+            <div class="song-container trending-song-container flex space-between scaled">
+                <!-- song details like img,name, author -->
+                <div class="song trending-song flex">
+                    <div class="song-img">
+                        <a href="#playbar-pop">
+                            <img src="./images/playlist/img-8.jpg" alt="song-image">
+                        </a>
+                        <div class="hover-play-box flex center">
+                            <a href="#playbar-pop">
+                                <i class="fas fa-play small-icon hover-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="song-details">
+                        <div class="song-name">
+                            <h3>Dance monkey</h3>
+                        </div>
+                        <div class="song-author">
+                            <h4>Tones</h4>
+                        </div>
+                    </div>
+
+                    <!-- pop-up for song featyres triggered by horizontal dots icon -->
+
+                    <div class="song-pop-up" id="trend-song-pop-3">
+                        <a href="#trending">
+                            <i class="fas fa-times small-icon scaled black"></i>
+                        </a>
+                        <div class="flex">
+                            <i class="fas fa-download small-icon scaled right green"></i>
+                            <h4>Download</h4>
+                        </div>
+                        <div class="flex">
+                            <i class="fas fa-plus small-icon scaled right green"></i>
+                            <h4>Add to Playlist</h4>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- song features like play, like -->
+                <div class="song-feature flex flex-col center ">
+                    <div>
+                        <a href="#trend-song-pop-3">
+                            <i class="fas fa-ellipsis-h  small-icon green scaled"></i>
+                        </a>
+                    </div>
+                    <div>
+                        <h5>2:45</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="song-container trending-song-container flex space-between scaled">
+                <!-- song details like img,name, author -->
+                <div class="song trending-song flex">
+                    <div class="song-img">
+                        <a href="#playbar-pop">
+                            <img src="./images/playlist/img-9.jpg" alt="song-image">
+                        </a>
+                        <div class="hover-play-box flex center">
+                            <a href="#playbar-pop">
+                                <i class="fas fa-play small-icon hover-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="song-details">
+                        <div class="song-name">
+                            <h3>The Box</h3>
+                        </div>
+                        <div class="song-author">
+                            <h4>Roddy Rich</h4>
+                        </div>
+                    </div>
+
+                    <!-- pop-up for song featyres triggered by horizontal dots icon -->
+
+                    <div class="song-pop-up" id="trend-song-pop-4">
+                        <a href="#trending">
+                            <i class="fas fa-times small-icon scaled black"></i>
+                        </a>
+
+                        <div class="flex">
+                            <i class="fas fa-download small-icon scaled right green"></i>
+                            <h4>Download</h4>
+                        </div>
+                        <div class="flex">
+                            <i class="fas fa-plus small-icon scaled right green"></i>
+                            <h4>Add to Playlist</h4>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- song features like play, like -->
+                <div class="song-feature ">
+                    <div>
+                        <a href="#trend-song-pop-4">
+                            <i class="fas fa-ellipsis-h green small-icon scaled"></i>
+                        </a>
+                    </div>
+                    <div>
+                        <h5>3:23</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Show more -->
+
+        <div class="show-more flex center">
+            <h5>Show More</h5>
+            <i class="fas fa-chevron-right small-icon scaled black"></i>
+        </div>
+    </section>
+
+    <!-- playbar -->
+
+    <section class="playbar-container" id="playbar-pop">
+        <div class="play-bar flex space-between">
+            <div class=" playbar-song flex space-evenly  ">
+                <!-- song details like img,name, author -->
+                <div class="song flex">
+                    <div class="song-img play-bar-song-img">
+                        <img src="./images/playlist/img-6.jpg" alt="song-image">
+                    </div>
+                    <div class="song-details">
+                        <div class="song-name">
+                            <h3>Blinding Lights</h3>
+                        </div>
+                        <div class="song-author">
+                            <h4>weekend</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- song features like play, like -->
+                <div class="song-feature flex flex-col center playbar-like">
+                    <div>
+                        <i class="far fa-heart small-icon red like scaled"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="song-controls flex flex-col space-between">
+                <div class="controls flex center">
+                    <i class="fas fa-random small-icon green"></i>
+                    <i class="fas fa-step-backward small-icon black"></i>
+                    <i class="far fa-pause-circle medium-icon"></i>
+                    <i class="fas fa-step-forward small-icon black"></i>
+                    <i class="fas fa-redo small-icon green"></i>
+                </div>
+
+                <div class="range flex center">
+                    <h5>0:00</h5>
+                    <input type="range">
+                    <h5>3:45</h5>
+                </div>
+            </div>
+
+            <div class="volume flex space-between">
+                <i class="fas fa-volume-up small-icon black "></i>
+                <input type="range" >
+            </div>
+
+            <div class="user-function flex flex-col space-between">
+                <div>
+                    <a href="#">
+                        <i class="fas fa-times small-icon scaled black"></i>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <i class="fas fa-ellipsis-h small-icon green scaled"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular artist section -->
+
+    <section class="artist-container">
+        <div class="artist-head">
+            <h2> Popular Artists</h2>
+        </div>
+
+        <div class="artist-group flex wrap space-evenly">
+
+            <div class="artist flex flex-col wrap">
+                <a href="./artist.html">
+                    <img class="artist-img" src="./images/artist/artist-1.webp" alt="artist-image">
+                </a>
+                <h3>Arijit Singh</h3>
+            </div>
+
+            <div class="artist flex flex-col wrap">
+                <a href="./artist.html">
+                    <img class="artist-img" src="images/artist/artist-2.jpg" alt="artist-image">
+                </a>
+                <h3>Alan Walker</h3>
+            </div>
+
+            <div class="artist flex flex-col wrap">
+                <a href="./artist.html">
+                    <img class="artist-img" src="./images/artist/artist-3.jpg" alt="artist-image">
+                </a>
+                <h3>Ed Sheeran</h3>
+            </div>
+
+            <div class="artist flex flex-col wrap">
+                <a href="./artist.html">
+                    <img class="artist-img" src="./images/artist/artist-4.jpg" alt="artist-image">
+                </a>
+                <h3>Lata Mangeshkar</h3>
+            </div>
+
+            <div class="artist flex flex-col wrap">
+                <a href="./artist.html">
+                    <img class="artist-img" src="./images/artist/artist-5.jpg" alt="artist-image">
+                </a>
+                <h3>Eminem</h3>
+            </div>
+
+            <div class="artist flex flex-col wrap">
+                <a href="./artist.html">
+                    <img class="artist-img" src="./images/artist/artist-6.jpg" alt="artist-image">
+                </a>
+                <h3>Marshmello</h3>
+            </div>
+
+        </div>
+        <div class="show-more artist-more flex center">
+            <h5>See All</h5>
+            <i class="fas fa-chevron-right small-icon scaled black"></i>
+        </div>
+    </section>
+
+    <!-- Station section  -->
+
+    <section class="station-container ">
+        <div class="artist-head station-head">
+            <h2> Stations</h2>
+        </div>
+
+        <div class="station-group flex wrap space-evenly">
+
+            <div class="station flex flex-col ">
+                <div class="station-holder station-holder-1 flex  center">
+                    <img src="./images/stations/station-1.jpg" alt="station-img">
+                </div>
+                <h3>Classical</h3>
+            </div>
+
+            <div class="station flex flex-col ">
+                <div class="station-holder station-holder-2 flex  center">
+                    <img src="./images/stations/station-2.jpg" alt="station-img">
+                </div>
+                <h3>Party</h3>
+            </div>
+
+            <div class="station flex flex-col ">
+                <div class="station-holder station-holder-3 flex  center">
+                    <img src="./images/stations/station-3.avif" alt="station-img">
+                </div>
+                <h3>Romantic</h3>
+            </div>
+
+            <div class="station flex flex-col ">
+                <div class="station-holder station-holder-4 flex  center">
+                    <img src="./images/stations/station-4.avif" alt="station-img">
+                </div>
+                <h3>Workout</h3>
+            </div>
+
+            <div class="station flex flex-col ">
+                <div class="station-holder station-holder-5 flex  center">
+                    <img src="./images/stations/station-5.jpg" alt="station-img">
+                </div>
+                <h3>Chill</h3>
+            </div>
+
+            <div class="station flex flex-col ">
+                <div class="station-holder station-holder-6 flex  center">
+                    <img src="./images/stations/station-6.avif" alt="station-img">
+                </div>
+                <h3>Meditation</h3>
+            </div>
+
+        </div>
+        <div class="show-more flex center">
+            <h5>See All</h5>
+            <i class="fas fa-chevron-right small-icon scaled black"></i>
+        </div>
+    </section>
+
+    <!-- Mood cards -->
+
+    <section class="cards-container">
+
+        <div class="cards-group flex space-evenly wrap">
+
+            <div class="card pointer">
+                <div class="card-holder card-1">
+                    <h2>Party</h2>
+                </div>
+            </div>
+
+            <div class="card pointer">
+                <div class="card-holder card-2">
+                    <h2>Electronic</h2>
+                </div>
+            </div>
+
+            <div class="card pointer">
+                <div class="card-holder card-3">
+                    <h2>Road Trip</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="show-more flex center">
+            <h5>See All</h5>
+            <i class="fas fa-chevron-right small-icon scaled black"></i>
+        </div>
+
+    </section>
+
+    <!-- Hindi popular -->
+
+    <section class="popular-container station-container">
+
+        <div class="station-head artist-head">
+            <h2> Popular in Hindi</h2>
+        </div>
+
+        <div class="popular-song-group artist-group flex space-evenly wrap">
+
+            <div class="popular-song flex flex-col wrap">
+                <a href="#playbar-pop">
+                    <img src="./images/popular-song/song-1.jpg" alt="popular-song-image">
+                </a>
+                <h3>Kesari</h3>
+                <h4>Tanishk Bagchi</h4>
+            </div>
+
+            <div class="popular-song flex flex-col wrap">
+                <a href="#playbar-pop">
+                    <img src="./images/popular-song/song-2.jpg" alt="popular-song-image">
+                </a>
+                <h3>Dancing</h3>
+                <h4>Aaron smith</h4>
+            </div>
+
+            <div class="popular-song flex flex-col wrap">
+                <a href="#playbar-pop">
+                    <img src="./images/popular-song/song-3.jpg" alt="popular-song-image">
+                </a>
+                <h3>Aashiqui Aa gayi</h3>
+                <h4>Tanishk Bagchi</h4>
+            </div>
+
+            <div class="popular-song flex flex-col wrap">
+                <a href="#playbar-pop">
+                    <img src="./images/popular-song/song-4.jpg" alt="popular-song-image">
+                </a>
+                <h3>Dark Horse</h3>
+                <h4>Katy Perry</h4>
+            </div>
+
+            <div class="popular-song flex flex-col wrap">
+                <a href="#playbar-pop">
+                    <img src="./images/popular-song/song-5.jpg" alt="popular-song-image">
+                </a>
+                <h3>Derniere danse</h3>
+                <h4>Indila</h4>
+            </div>
+
+            <div class="popular-song flex flex-col wrap">
+                <a href="#playbar-pop">
+                    <img src="./images/popular-song/song-6.jpg" alt="popular-song-image">
+                </a>
+                <h3>Bijlee Bijlee</h3>
+                <h4>Harrdy Sandhu</h4>
+            </div>
+
+        </div>
+
+        <div class="show-more flex center">
+            <h5>See All</h5>
+            <i class="fas fa-chevron-right small-icon scaled black"></i>
+        </div>
+
+    </section>
+
+    <!-- English popular -->
+
+    <section class="popular-container station-container">
+
+        <div class="artist-head station-head">
+            <h2> Popular in English</h2>
+        </div>
+
+        <div class="popular-song-group artist-group flex space-evenly wrap">
+
+            <div class="popular-song flex flex-col wrap">
+                <a href="#playbar-pop">
+                    <img src="./images/popular-song/song-2.jpg" alt="popular-song-image">
+                </a>
+                <h3>Dancing</h3>
+                <h4>Aaron smith</h4>
+            </div>
+
+            <div class="popular-song flex flex-col wrap">
+                <a href="#playbar-pop">
+                    <img src="./images/popular-song/song-4.jpg" alt="popular-song-image">
+                </a>
+                <h3>Dark Horse</h3>
+                <h4>Katy Perry</h4>
+            </div>
+
+            <div class="popular-song flex flex-col wrap">
+                <a href="#playbar-pop">
+                    <img src="./images/popular-song/song-1.jpg" alt="popular-song-image">
+                </a>
+                <h3>Kesari</h3>
+                <h4>Tanishk Bagchi</h4>
+            </div>
+
+            <div class="popular-song flex flex-col wrap">
+                <a href="#playbar-pop">
+                    <img src="./images/popular-song/song-3.jpg" alt="popular-song-image">
+                </a>
+                <h3>Aashiqui Aa gayi</h3>
+                <h4>Tanishk Bagchi</h4>
+            </div>
+
+            <div class="popular-song flex flex-col wrap">
+                <a href="#playbar-pop">
+                    <img src="./images/popular-song/song-6.jpg" alt="popular-song-image">
+                </a>
+                <h3>Bijlee Bijlee</h3>
+                <h4>Harrdy Sandhu</h4>
+            </div>
+
+            <div class="popular-song flex flex-col wrap">
+                <a href="#playbar-pop">
+                    <img src="./images/popular-song/song-5.jpg" alt="popular-song-image">
+                </a>
+                <h3>Derniere danse</h3>
+                <h4>Indila</h4>
+            </div>
+
+        </div>
+
+        <div class="show-more flex center">
+            <h5>See All</h5>
+            <i class="fas fa-chevron-right small-icon scaled black"></i>
+        </div>
+
+    </section>
+
+    <!-- Footer section -->
+
+    <footer class="footer-container">
+
+        <!-- Found this svg option for creating wave like shape -->
+        <!-- Down wave -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#2cd581" fill-opacity="1"
+                d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+            </path>
+        </svg>
+        <!-- footer head -->
+        <div class="footer-head">
+            <h1>Music Freak Like Us ?</h1>
+        </div>
+        <!-- footer group -->
+        <div class="footer-group flex space-evenly wrap">
+
+            <div class="footer-image">
+                <img src="./images/basic-images/music-man.png" alt="music-man-image">
+            </div>
+
+            <!-- social links -->
+
+            <div class="social-links flex flex-col wrap ">
+
+                <h2>Follow us on:</h2>
+
+                <div class="links-group flex space-between">
+                    <a href="https://www.instagram.com" target="_blank">
+                        <i class="fab fa-instagram medium-icon green scaled link"></i>
+                    </a>
+
+                    <a href="https://www.facebook.com" target="_blank">
+                        <i class="fab fa-facebook-f medium-icon green scaled link"></i>
+                    </a>
+
+                    <a href="https://www.youtube.com" target="_blank">
+                        <i class="fab fa-youtube medium-icon green scaled link"></i>
+                    </a>
+
+                    <a href="https://www.twitter.com" target="_blank">
+                        <i class="fab fa-twitter medium-icon green scaled link"></i>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- up wave -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#2cd581" fill-opacity="1"
+                d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+            </path>
+        </svg>
+
+        <!-- credit/copyrights  section -->
+        <div class="show-more flex center">
+            <h5>Made with <span> <i class="fas fa-heart small-icon scaled red"></i></span> by Debashish! for Coding
+                Ninja!
+            </h5>
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
+
+<!-- Happy Ending ! -->

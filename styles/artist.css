@@ -1,0 +1,168 @@
+body{
+    background-color: var(--color-green);
+}
+/* commomn styling */
+.right{
+    padding-right: 1rem;
+}
+.m-right{
+    margin-right: 1rem;
+}
+.text-center{
+    text-align: center;
+}
+.top{
+    margin-top: 0.6rem;
+}
+.margin-top{
+    margin-top: 1.5rem;
+}
+.bold{
+    font-weight: 600 ;
+}
+/* artist-card styles*/
+
+.artist-card-container{
+    height:30rem;
+    width:65%;
+    margin-left: 2.5%;
+    margin-top: 2.5rem;
+    background-color: var(--color-light-white);
+    border-top-right-radius: 1.5rem;
+    border-top-left-radius: 1.5rem;
+}
+.artist-card-container img{
+    height:30rem;
+    width:30rem;
+    border-top-left-radius: 1.5rem;
+}
+@media screen and (max-width:600px){
+    .artist-card-container {
+       height:auto;
+       flex-wrap: wrap;
+       flex-direction: column;
+       justify-content: space-between;
+    }
+    .artist-data > div{
+        margin-bottom: 1.5rem; 
+    }
+    .artist-card-container img{
+        border-top-left-radius: 0;
+        border-radius:1.5rem;
+    }
+}
+.artist-data{
+    padding:0 2rem;
+    height:90%;
+    width:100%;
+}
+.artist-info{
+    width:100%;
+}
+.artist-features{
+    width:100%;
+}
+button{
+    padding:1rem 3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    border:none;
+    border-radius:1rem;
+    background-color: var(--color-green);
+}
+button h3{
+    color:var(--color-light-white);
+}
+@media screen and (max-width:820px){
+    .artist-card-container{
+        width:95%;
+    }
+}
+/* Artist song list style */
+.artist-list-container{
+    width:65%;
+    margin-left: 2.5%;
+    padding:1.3rem;
+    background-color: var(--color-dark-white);
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+.artist-song-info img{
+    height:8rem;
+    width:8rem;
+}
+.artist-song{
+    background-color: var(--color-light-white);
+    box-shadow: var(--box-shadow);
+    margin-top: 1rem;
+}
+@media screen and (max-width:820px){
+    .artist-list-container{
+        width:95%;
+    }
+}
+/* similar section styles */
+.similar-container{
+    width:30%;
+    position:absolute;
+    right:1%;
+    top:11rem;
+    background-color: var(--color-light-white);
+    box-shadow: var(--box-shadow);
+    margin-top: 2rem;
+    padding:2rem;
+    border-radius: 1.5rem;
+}
+.similar-artist{
+    background-color: var(--color-dark-white);
+    box-shadow: var(--box-shadow);
+    margin-top: 1.5rem;
+    border-radius: 1.5rem;
+}
+.similar-artist img{
+    height:9rem;
+    width:9rem;
+    border-radius: 1.5rem;
+}
+@media screen and (max-width:820px){
+    /* similar artist for mobile */
+    .similar-container{
+        /* sets the element to its default style */
+        position: initial;
+        width:95%;
+        margin:2rem auto;
+    }
+}
+/* To trigger artist page play bar */
+#artist-playbar:target{
+    display:block;
+}
+/* recently styles */
+.recently-container{
+    top:58rem;
+}
+.recently-container img{
+    height:7rem;
+    width:7rem;
+}
+
+/* back to home styles */
+
+.home h3{
+    margin-top:4rem;
+    margin-bottom: 10rem;
+    color:var(--color-light-white);
+    border-bottom:2px solid var(--color-light-white);
+}
+
+/* Footer customisation */
+
+.credit{
+    background-color: var(--color-light-white);
+}
+.footer-container{
+    box-shadow: none;
+    margin-bottom:0;
+}
+
+/* Happy Ending :)*/
